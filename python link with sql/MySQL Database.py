@@ -2,7 +2,7 @@ import mysql.connector
 from tabulate import tabulate
 
 con = mysql.connector.connect(host="127.0.0.1", user="root", 
-                              password="neethu3026", database="mysql")
+                              password="use your password", database="use your database name")
 
 def insert():
     name = input("Enter Name : ")
