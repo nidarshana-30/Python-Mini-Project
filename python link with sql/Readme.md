@@ -24,61 +24,59 @@ MySQL
 
 mysql-connector-python
 
-tabulate
-
 ## Database Setup
 
 Connect to MySQL:
 
-SHOW DATABASES;
-USE mysql;
+        SHOW DATABASES;
+        USE mysql;
 
 
 Create the data table:
 
-CREATE TABLE data(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(30),
-    age INT,
-    address VARCHAR(30),
-    contact VARCHAR(10),
-    mail VARCHAR(50)
-);
+        CREATE TABLE data(
+            id INT PRIMARY KEY AUTO_INCREMENT,
+            name VARCHAR(30),
+            age INT,
+            address VARCHAR(30),
+            contact VARCHAR(10),
+            mail VARCHAR(50)
+        );
 
 
 Optional: Modify the contact column length if needed:
 
-ALTER TABLE data MODIFY contact VARCHAR(10);
-
-
-Delete table (if needed for reset):
-
-DROP TABLE data;
+        ALTER TABLE data MODIFY contact VARCHAR(10);
+        
+        
+        Delete table (if needed for reset):
+        
+        DROP TABLE data;
 
 ## Python Setup
 
 1)Install required packages:
 
-pip install mysql-connector-python
-pip install tabulate
+        pip install mysql-connector-python
+        pip install tabulate
 
 
 2)Database connection:
 
-import mysql.connector
-
-con = mysql.connector.connect(
-    host="127.0.0.1", 
-    user="root", 
-    password="your_password", 
-    database="your_database_name"
-)
+        import mysql.connector
+        
+        con = mysql.connector.connect(
+            host="127.0.0.1", 
+            user="root", 
+            password="your_password", 
+            database="your_database_name"
+        )
 
 3)How to Run
 
 Run the Python script:
 
-python your_script_name.py
+        python your_script_name.py
 
 
 4)You will see a menu:
@@ -96,12 +94,12 @@ Enter your choice and follow the prompts.
 
 Select Records Table Format:
 
-+----+--------+-----+---------+-----------+------------------+
-| ID | NAME   | AGE | ADDRESS | CONTACT   | MAIL             |
-+----+--------+-----+---------+-----------+------------------+
-| 1  | John   | 25  | NY      | 1234567890| john@mail.com    |
-| 2  | Alice  | 30  | LA      | 9876543210| alice@mail.com   |
-+----+--------+-----+---------+-----------+------------------+
+        +----+--------+-----+---------+-----------+------------------+
+        | ID | NAME   | AGE | ADDRESS | CONTACT   | MAIL             |
+        +----+--------+-----+---------+-----------+------------------+
+        | 1  | John   | 25  | NY      | 1234567890| john@mail.com    |
+        | 2  | Alice  | 30  | LA      | 9876543210| alice@mail.com   |
+        +----+--------+-----+---------+-----------+------------------+
 
 ## Notes
 
