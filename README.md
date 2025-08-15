@@ -62,47 +62,47 @@ This repository contains Python applications to perform CRUD (Create, Read, Upda
 
 1) Connect to MySQL:
 
-SHOW DATABASES;
-USE your_database_name;
+            SHOW DATABASES;
+            USE your_database_name;
 
 2)Create the data table:
 
- CREATE TABLE data(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(30),
-    age INT,
-    address VARCHAR(30),
-    contact VARCHAR(10),
-    mail VARCHAR(50)
-);
+             CREATE TABLE data(
+                id INT PRIMARY KEY AUTO_INCREMENT,
+                name VARCHAR(30),
+                age INT,
+                address VARCHAR(30),
+                contact VARCHAR(10),
+                mail VARCHAR(50)
+            );
 3) Optional: Modify column length:
 
-ALTER TABLE data MODIFY contact VARCHAR(10);
+            ALTER TABLE data MODIFY contact VARCHAR(10);
 
 ### Python Setup
 
 1)Install required packages:
 
-pip install mysql-connector-python
-pip install tabulate
+            pip install mysql-connector-python
+            pip install tabulate
 
 
 2) Connect to your MySQL database in Python:
 
-import mysql.connector
-
-con = mysql.connector.connect(
-    host="127.0.0.1",
-    user="root",
-    password="your_password",
-    database="your_database_name"
-)
+            import mysql.connector
+            
+            con = mysql.connector.connect(
+                host="127.0.0.1",
+                user="root",
+                password="your_password",
+                database="your_database_name"
+            )
 
 ### How to Run
 
 * Run the MySQL Python script:
 
-python mysql_crud.py
+            python mysql_crud.py
 
 
 * Follow the menu:
@@ -120,22 +120,22 @@ SQLite is file-based, so no server setup is required. A database file will be cr
 
 Create the data table (if not exists):
 
-import sqlite3
-
-con = sqlite3.connect('database.db')
-cur = con.cursor()
-cur.execute("""
-CREATE TABLE IF NOT EXISTS data(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    age INTEGER NOT NULL,
-    address TEXT NOT NULL,
-    contact TEXT NOT NULL,
-    mail TEXT NOT NULL
-)
-""")
-con.commit()
-con.close()
+            import sqlite3
+            
+            con = sqlite3.connect('database.db')
+            cur = con.cursor()
+            cur.execute("""
+            CREATE TABLE IF NOT EXISTS data(
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT NOT NULL,
+                age INTEGER NOT NULL,
+                address TEXT NOT NULL,
+                contact TEXT NOT NULL,
+                mail TEXT NOT NULL
+            )
+            """)
+            con.commit()
+            con.close()
 
 ###  Python Setup
 
@@ -143,13 +143,13 @@ No extra packages needed for SQLite (built-in).
 
 Install tabulate for table formatting:
 
-pip install tabulate
+            pip install tabulate
 
 ### How to Run
 
 * Run the SQLite Python script:
 
-python sqlite_crud.py
+            python sqlite_crud.py
 
 
 Use the interactive menu to manage records.
@@ -158,12 +158,12 @@ Use the interactive menu to manage records.
 
 Tabular Display of Records:
 
-+----+--------+-----+---------+-----------+------------------+
-| ID | NAME   | AGE | ADDRESS | CONTACT   | MAIL             |
-+----+--------+-----+---------+-----------+------------------+
-| 1  | John   | 25  | NY      | 1234567890| john@mail.com    |
-| 2  | Alice  | 30  | LA      | 9876543210| alice@mail.com   |
-+----+--------+-----+---------+-----------+------------------+
+            +----+--------+-----+---------+-----------+------------------+
+            | ID | NAME   | AGE | ADDRESS | CONTACT   | MAIL             |
+            +----+--------+-----+---------+-----------+------------------+
+            | 1  | John   | 25  | NY      | 1234567890| john@mail.com    |
+            | 2  | Alice  | 30  | LA      | 9876543210| alice@mail.com   |
+            +----+--------+-----+---------+-----------+------------------+
 
 ## Notes
 
