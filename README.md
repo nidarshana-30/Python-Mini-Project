@@ -10,19 +10,19 @@ This repository contains Python applications to perform CRUD (Create, Read, Upda
 
 * MySQL CRUD Application
 
-      Database Setup
+  Database Setup
       
-      Python Setup
+  Python Setup
       
-      How to Run
+  How to Run
 
 * SQLite CRUD Application
 
-      Database Setup
+  Database Setup
       
-      Python Setup
+  Python Setup
       
-      How to Run
+  How to Run
 
 * Example Output
 
